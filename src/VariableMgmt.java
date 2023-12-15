@@ -28,7 +28,7 @@ public class VariableMgmt {
      * @return The value or empty string if key doesn't exist
      */
     public String getVar(String key) {
-        if (checkVar(key)) {
+        if (!(checkVar(key))) {
             return "";
         } else {
             return currVars.get(key);

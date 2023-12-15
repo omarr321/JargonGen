@@ -1,0 +1,26 @@
+Cache
+Keyboard
+Mouse
+Monitor
+CPU
+GPU
+RAM
+Clock Speed
+Eathernet
+Wifi
+Power Supply
+Settings
+UDP
+TCP
+Network
+Switch
+Node
+Router
+Modem
+DHCP
+IP
+MAC
+Fiber link
+DNS
+VM Server
+Bluetooth
