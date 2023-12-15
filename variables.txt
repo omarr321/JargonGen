@@ -1,26 +1,29 @@
-Cache
-Keyboard
-Mouse
-Monitor
-CPU
-GPU
+cache
+the keyboard
+the mouse
+the monitor
+the CPU
+the GPU
 RAM
-Clock Speed
-Eathernet
-Wifi
-Power Supply
-Settings
+clock speed
+ethernet
+Wi-Fi
+the power supply
+settings
 UDP
 TCP
-Network
-Switch
-Node
-Router
-Modem
+the network
+the switch
+the node
+the router
+the modem
 DHCP
-IP
-MAC
-Fiber link
-DNS
-VM Server
+the IP
+the MAC Address
+the fiber link
+the DNS Server
+the VM Server
 Bluetooth
+the LAN
+the uplink
+the downlink

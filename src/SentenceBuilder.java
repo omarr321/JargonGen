@@ -90,7 +90,7 @@ public class SentenceBuilder {
             this.sentencePieces.add(temp);
         }
 
-        //TODO: Step 2 - Replace variables with random variables from the file. (IE: <A>, " needs ", <B>, " to function" = "CPU", " needs ", "GPU", " to function")
+        //this part of the code replaces the variables with fill-ins from the list provided
         for (int i = 0; i < this.sentencePiecesV.size(); i++) {
             String tempV = this.sentencePiecesV.get(i);
             if (tempV != "") {
@@ -132,20 +132,18 @@ public class SentenceBuilder {
 
     @Override
     public String toString() {
-        String tempV = "Variable Array:\n{";
         String[] vArr = this.sentencePiecesV.toArray(new String[this.sentencePiecesV.size()]);
-        for(String str : vArr) {
-            tempV = tempV + str + ", ";
-        }
-        tempV = tempV + "}\n";
-
-        String tempS = "String Array:\n{";
         String[] sArr = (String[]) this.sentencePieces.toArray(new String[this.sentencePieces.size()]);
-        for(String str : sArr) {
-            tempS = tempS + str + ", ";
-        }
-        tempS = tempS + "}\n";
+        String strReturn = "";
 
-        return tempV + tempS;
+        for (int i = 0; i < sArr.length; i++) {
+            if (sArr[i] != "") {
+                strReturn = strReturn + sArr[i];
+            } else {
+                strReturn = strReturn + vArr[i];
+            }
+        }
+
+        return strReturn;
     }
 }
