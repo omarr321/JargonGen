@@ -1,0 +1,29 @@
+cache
+the keyboard
+the mouse
+the monitor
+the CPU
+the GPU
+RAM
+clock speed
+ethernet
+Wi-Fi
+the power supply
+settings
+UDP
+TCP
+the network
+the switch
+the node
+the router
+the modem
+DHCP
+the IP
+the MAC Address
+the fiber link
+the DNS Server
+the VM Server
+Bluetooth
+the LAN
+the uplink
+the downlink

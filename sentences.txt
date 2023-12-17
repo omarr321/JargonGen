@@ -1,0 +1,7 @@
+<A> needs to be connected to <B>
+<A> uses <B> to talk to <C>
+<A> acts like <B> in this case
+<A> and <B> need to be connected to <C>
+<A> routes to <B> and connects to both <C> and <D>
+<A> is not connected to <B>
+<A> is not connected to <B> so that <C> works properly

@@ -1,4 +1,5 @@
 import java.util.Dictionary;
+import java.util.Enumeration;
 import java.util.Hashtable;
 
 /**
@@ -28,7 +29,7 @@ public class VariableMgmt {
      * @return The value or empty string if key doesn't exist
      */
     public String getVar(String key) {
-        if (checkVar(key)) {
+        if (!(checkVar(key))) {
             return "";
         } else {
             return currVars.get(key);
@@ -42,5 +43,21 @@ public class VariableMgmt {
      */
     public boolean checkVar(String key) {
         return currVars.get(key) != null;
+    }
+
+    /**
+     * Checks to see if a value is already used by another variable
+     * @param value - The value to check
+     * @return True if it does find the value, false if it does not
+     */
+    public boolean checkValue(String value) {
+        boolean hasValue = false;
+        Enumeration<String> keys = currVars.keys();
+        while(keys.hasMoreElements()) {
+            if (getVar(keys.nextElement()).equals(value)) {
+                hasValue = true;
+            }
+        }
+        return hasValue;
     }
 }
