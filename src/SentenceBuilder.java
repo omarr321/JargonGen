@@ -116,17 +116,23 @@ public class SentenceBuilder {
      */
     private String getRandVar() throws IOException {
         BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader(this.vaildVarsFilePath));
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException("ERROR: Variable file not found!");
+        String temp = "";
+        while(true) {
+            try {
+                reader = new BufferedReader(new FileReader(this.vaildVarsFilePath));
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException("ERROR: Variable file not found!");
+            }
+            int lineToGrab = new Random().nextInt(this.varsFileTotalLines);
+            for (int i = 0; i < lineToGrab; i++) {
+                reader.readLine();
+            }
+            temp = reader.readLine();
+            reader.close();
+            if (!(sentenceVars.checkValue(temp))) {
+                break;
+            }
         }
-        int lineToGrab = new Random().nextInt(this.varsFileTotalLines);
-        for (int i = 0; i < lineToGrab; i++) {
-            reader.readLine();
-        }
-        String temp = reader.readLine();
-        reader.close();
         return temp;
     }
 
